@@ -26,6 +26,27 @@ main a {
 	justify-content: center;
 }
 
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+#presentacion {
+    background-color: green;
+    padding: 20px;
+}
+#presentacion p {
+    text-align: center;
+    font-size: 18px;
+}
+#linkAcceso {
+    align-item: center;
+    background-color: white;
+    width: 70%;
+    padding: 20px;
+    font-size: 25px;
+}
+
 footer {
 	bottom: 0px;
 	background-color: black;
