@@ -80,6 +80,41 @@
     <a class="whatsapp-btn" href="https://wa.me/5493854753496?text=compra" target="_blank">
       Encargar por WhatsApp
     </a>
+    
+			<form id="miFormulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Enviar</button>
+            </form>
+<script>
+    document.getElementById("miFormulario").addEventListener("submit", function(event) {
+        event.preventDefault(); // Evita el envío por defecto
+
+        // Captura los valores de los campos
+        let nombre = document.getElementById("nombre").value;
+        let email = document.getElementById("email").value;
+
+        // Construye el mensaje
+        let mensaje = `Hola, aquí están los datos:\nNombre: ${nombre}\nCorreo: ${email}`;
+
+        // Codifica el mensaje para que sea válido en la URL
+        let mensajeCodificado = encodeURIComponent(mensaje);
+
+        // Número de destino (modifícalo con el número deseado)
+        let numeroWhatsApp = "5493854753496"; // Reemplázalo con el número real
+
+        // Construye el enlace de WhatsApp
+        let enlaceWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`;
+
+        // Redirige al usuario a WhatsApp
+        window.location.href = enlaceWhatsApp;
+    });
+</script>
+    
   </main>
 
   <footer>
